@@ -64,6 +64,21 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/system/notice/components/MyNotice.vue"),
         meta: { title: "我的通知", icon: "user", hidden: true },
       },
+      {
+        path: "/example",
+        component: Layout,
+        children: [
+          {
+            path: "index",
+            component: () => import("@/views/example/index.vue"),
+            name: "Example",
+            meta: {
+              title: "Example Page",
+              icon: "example",
+            },
+          },
+        ],
+      },
     ],
   },
 ];
